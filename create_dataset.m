@@ -6,7 +6,7 @@ clear all
 % http://vision.stanford.edu/aditya86/ImageNetDogs/
 dogs_dir = "C:\Images\Images";
 filelist = dir(fullfile(dogs_dir, '**/*.*'));  % get list of files and folders in any subfolder
-filelist = filelist(~[filelist.isdir])
+filelist = filelist(~[filelist.isdir]);
 
 n = size(filelist, 1);
 image_paths = cell(n, 1);
@@ -16,7 +16,7 @@ layer = 'avg_pool';
 inputSize = [224, 224];
 features = [];
 
-for i = 1:n
+for i = 1:10    %testing with 10
     i % alive sig
     a = filelist(i);
     p = append(a.folder, '/', a.name);
@@ -24,7 +24,7 @@ for i = 1:n
     img = imread(p);
     img = imresize(img, inputSize);
     feat_vec = activations(net,[img],layer,'OutputAs','rows');
-    features(:, i) = feat_vec;
+    features(i, :) = feat_vec;  %changed to rows instead of columns
 end
 
 % clean up variables

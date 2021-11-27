@@ -1,7 +1,10 @@
 function results = dist_calc(dataset, testset)
 
-    dataset = featuresTrain;    %comment out
-    testset = featuresTest;     %comment out
+    % testset can either be a matrix of image features
+    % or a single image features array
+
+    %dataset = featuresTrain;    %comment out
+    %testset = featuresTest;     %comment out
 
     [rows cols] = size(testset);
     size_of_test = rows;
