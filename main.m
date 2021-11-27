@@ -29,6 +29,12 @@ load data
 img = imread('Chihuahua.jpg');
 dog_features = feature_extract(img);
 similarity_array = dist_calc(features, dog_features);
+top_n = 10;
+[top, indices]=mink(similarity_array, top_n);
+for i = 1:top_n
+    figure();imshow(imread(paths{indices(1,i)}), []);
+end
+
 similar_dog_image = paths(1, similarity_array(1,2));
 figure();imshow(imread(similar_dog_image{1,1}), []);
 

@@ -9,15 +9,15 @@ filelist = dir(fullfile(dogs_dir, '**/*.*'));  % get list of files and folders i
 filelist = filelist(~[filelist.isdir]);
 
 n = size(filelist, 1);
-image_paths = cell(n, 1);
 
 net = resnet50;
 layer = 'avg_pool';
 inputSize = [224, 224];
 features = [];
 
-for i = 1:10    %testing with 10
-    i % alive sig
+for i = 1:20580    %testing with 10
+    if (mod(i,1000) == 0)
+    end% alive sig
     a = filelist(i);
     p = append(a.folder, '/', a.name);
     paths{i} = p;
@@ -28,13 +28,13 @@ for i = 1:10    %testing with 10
 end
 
 % clean up variables
-clear p;
-clear img
-clear feat_vec;
-clear filelist;
-clear a; 
-clear n;
-clear dogs_dir;
+% clear p;
+% clear img
+% clear feat_vec;
+% clear filelist;
+% clear a; 
+% clear n;
+% clear dogs_dir;
 
 % save the matalb workspace
 save('data.mat');
