@@ -24,3 +24,7 @@ ind = sim_search(img, features, net)
 sim = imread(paths{ind(1,2)});
 imshow(sim)
 
+%% Testing for Ruben
+img = imread('Chihuahua.jpg');
+dog_features = feature_extract(img);
+

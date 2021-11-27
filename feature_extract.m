@@ -8,7 +8,7 @@ function result = feature_extract(image)
 
     img = imresize(img, inputSize);
     feat_vec = activations(net,[img],layer,'OutputAs','rows');
-    features(1) = feat_vec;  %changed to rows instead of columns
+    features(1,:) = feat_vec;
 
     result = features;
 
