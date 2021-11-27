@@ -17,8 +17,7 @@ function results = calc_distance(dataset, testset)
         for j = 1:size_of_dataset
             test_data = testset(i,:);
             train_data = dataset(j,:);
-            eu_dist = euclidean_dist(test_data, train_data);
-            %eu_dist = sqrt(sum(sum((test_data-train_data).^2)));
+            eu_dist = sqrt(sum(sum((test_data - train_data).^2)));
             if(eu_dist < dist)
                 dist = eu_dist;
                 results(i,2)=j;
