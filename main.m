@@ -17,13 +17,13 @@ top_n = 8;
 % img = imread('dog_with_baby.jpg');
 
 % Dog with person
-% img = imread('dog_with_peson.jpg');
+% img = imread('dog_with_person.jpg');
 
 % German shepherd
 % img = imread('German-shepherd.jpg');
 
 % Golden retriever puppy
-img = imread('golder-retriever-puppy.jpeg');
+% img = imread('golder-retriever-puppy.jpeg');
 
 dog_features = feature_extract(img);
 similarity_array = dist_calc(features, dog_features);
