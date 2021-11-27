@@ -1,4 +1,4 @@
-function results = calc_distance(dataset, testset)
+function results = dist_calc(dataset, testset)
 
     dataset = featuresTrain;    %comment out
     testset = featuresTest;     %comment out
