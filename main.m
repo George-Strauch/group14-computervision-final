@@ -25,6 +25,10 @@ sim = imread(paths{ind(1,2)});
 imshow(sim)
 
 %% Testing for Ruben
+load data
 img = imread('Chihuahua.jpg');
 dog_features = feature_extract(img);
+similarity_array = dist_calc(features, dog_features);
+similar_dog_image = paths(1, similarity_array(1,2));
+figure();imshow(imread(similar_dog_image{1,1}), []);
 
