@@ -4,7 +4,7 @@ clear all
 
 % path set up for specific linux machine
 % http://vision.stanford.edu/aditya86/ImageNetDogs/
-dogs_dir = '/run/media/george/STR/pics/dogs/Images/';
+dogs_dir = "C:\Images\Images";
 filelist = dir(fullfile(dogs_dir, '**/*.*'));  % get list of files and folders in any subfolder
 filelist = filelist(~[filelist.isdir])
 
