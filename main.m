@@ -33,7 +33,10 @@ top_n = 5;
 [top, indices]=mink(similarity_array, top_n);
 for i = 1:top_n
     figure();imshow(imread(paths{indices(1,i)}), []);
+    path = paths{indices(1,i)};
+    breed = '-[A-Z a-z \w]+/';
+    [start, endd] = regexp(path, breed);
+    title(path(1,start+1:endd-1));
 end
-
 
 
