@@ -15,7 +15,9 @@ files = files(~[files.isdir]);
 test_dog_images = files(:,1);
 
 for f=1:size(files,1)
-    img = imread(string(files(f).name));    
+    
+    img = imread('cow.jpg');
+%     img = imread(string(files(f).name));    
 
     dog_features = feature_extract(img);
     similarity_array = dist_calc(features, dog_features);
@@ -23,6 +25,7 @@ for f=1:size(files,1)
     figure(1);
     subplot(floor(top_n/3)+1,3,1);
     imshow(img,[]);
+    title(f);
     for i = 1:top_n
         figure(1);
         subplot(floor(top_n/3)+1,3,i+1);
@@ -34,7 +37,7 @@ for f=1:size(files,1)
         title(strrep(path(1,start+1:endd-1),'_',' '));
     end
     
-    pause(3);
+    pause(1);
 end
 
 
