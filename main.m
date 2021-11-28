@@ -1,8 +1,6 @@
 
 % clc
 % clear all
-<<<<<<< Updated upstream
-=======
 pause('on')
 set(groot,'defaultfigureposition',[400 250 900 750])
 %% Testing for Ruben
@@ -42,27 +40,5 @@ for f=1:size(files,1)
     
     pause(1);
 end
->>>>>>> Stashed changes
 
-% to load matlab workspace which includes network and variables
-% load('data.mat')
-
-% test data (these should be the same)
-num_image_paths = size(paths, 2)
-num_feature_vecs = size(features, 2)
-
-
-
-% loading data
-index = 5;
-img_path = paths{index}
-img = imread(img_path);
-feat_vec = features(:, index);
-size(feat_vec)
-
-img = imread('dog.jpg');
-ind = sim_search(img, features, net)
-
-sim = imread(paths{ind(1,2)});
-imshow(sim)
 
