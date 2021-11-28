@@ -4,8 +4,8 @@
 pause('on')
 set(groot,'defaultfigureposition',[400 250 900 750])
 %% Testing for Ruben
-load("G:\My Drive\School\Fall 2021\INTRO TO COMPUTER VISION\Final Project\data.mat");
-addpath("G:\My Drive\School\Fall 2021\INTRO TO COMPUTER VISION\Final Project\group14-computervision-final\Test_Images");
+load("G:\My Drive\School\Fall 2021\INTRO TO COMPUTER VISION\Final Project\data.mat");   %path to data.mat
+addpath("G:\My Drive\School\Fall 2021\INTRO TO COMPUTER VISION\Final Project\group14-computervision-final\Test_Images");    %path to test images
 %addpath("G:\My Drive\School\Fall 2021\INTRO TO COMPUTER VISION\Final Project\group14-computervision-final");
 
 %% Testing
